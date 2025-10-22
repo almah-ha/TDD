@@ -1,12 +1,14 @@
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class CalculatorTest {
 
     @Test
-    void shouldAddTwoPositiveNumbers() {
+    public void shouldAddTwoPositiveNumbers() {
         Calculator calculator = new Calculator();
-        int result = add.calculator(1, 1);
-        assertThat(result).isEqualto(2);
+        int result = calculator.add(1, 1);
+        assertThat(result).isEqualTo(2);
     }
 
 }
