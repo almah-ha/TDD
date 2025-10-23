@@ -15,7 +15,7 @@ public class CalculatorTest {
     }
 
     @Test
-    void shouldSubtractTwoPositiveNumbers() {
+    void shouldSubtractTwoNumbers() {
         Calculator calculator = new Calculator();
         int result = calculator.subtract(1, 1);
         assertThat(result).isEqualTo(0);
@@ -27,5 +27,13 @@ public class CalculatorTest {
         int result = calculator.multiply(2, 4);
         assertThat(result).isEqualTo(8);
     }
+
+    @Test
+    void shouldDivideTwoNumbers() {
+        Calculator calculator = new Calculator();
+        int result = calculator.divide(4, 2);
+        assertThat(result).isEqualTo(2);
+    }
+
 
 }
