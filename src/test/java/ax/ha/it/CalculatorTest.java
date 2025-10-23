@@ -35,5 +35,11 @@ public class CalculatorTest {
         assertThat(result).isEqualTo(2);
     }
 
+    @Test
+    void shouldHandleMaximumIntegerValuesInAddition() {
+        Calculator calculator = new Calculator();
+        int result = calculator.add(1, 2);
+        assertThat(result).isEqualTo(2);
+    }
 
 }
