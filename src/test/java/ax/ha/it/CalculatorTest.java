@@ -14,5 +14,11 @@ public class CalculatorTest {
         assertThat(result).isEqualTo(2);
     }
 
+    @Test
+    void shouldSubtractTwoPositiveNumbers() {
+        Calculator calculator = new Calculator();
+        int result = calculator.subtract(1, 1);
+        assertThat(result).isEqualTo(0);
+    }
 
 }
