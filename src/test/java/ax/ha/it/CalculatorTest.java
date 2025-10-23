@@ -21,5 +21,11 @@ public class CalculatorTest {
         assertThat(result).isEqualTo(0);
     }
 
+    @Test
+    void shouldMultiplyTwoNumbers() {
+        Calculator calculator = new Calculator();
+        int result = calculator.multiply(2, 4);
+        assertThat(result).isEqualTo(8);
+    }
 
 }
