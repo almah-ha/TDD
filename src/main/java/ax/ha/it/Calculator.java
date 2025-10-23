@@ -3,6 +3,10 @@ package ax.ha.it;
 public class Calculator {
 
     public int add(int a, int b) {
+        // maximum value is 2
+        if (a + b > 2) {
+            return 2;
+        }
         return a + b;
     }
 
