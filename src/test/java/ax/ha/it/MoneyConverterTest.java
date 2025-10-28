@@ -23,4 +23,13 @@ public class MoneyConverterTest {
         BigDecimal result = converter.eurToUsd(eur);
         assertThat(result).isEqualByComparingTo("100.00");
     }
+
+    @Test
+    void shouldConvert100EURToSEK() {
+        MoneyConverter converter = new MoneyConverter();
+        BigDecimal eur = new BigDecimal("100.00");
+        BigDecimal result = converter.sekToEur(eur);
+        assertThat(result).isEqualByComparingTo("1093.00");
+    }
+
 }
