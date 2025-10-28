@@ -15,4 +15,5 @@ public class MoneyConverterTest {
         BigDecimal result = converter.usdToEur(usd);
         assertThat(result).isEqualByComparingTo("92.00");
     }
+
 }
