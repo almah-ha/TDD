@@ -23,6 +23,4 @@ public class MoneyConverterTest {
         BigDecimal result = converter.eurToUsd(eur);
         assertThat(result).isEqualByComparingTo("100.00");
     }
-
-    
 }
