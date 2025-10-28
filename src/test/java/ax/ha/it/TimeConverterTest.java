@@ -27,5 +27,10 @@ public class TimeConverterTest {
                 .hasMessageContaining("seconds must be non-negative");
     }
 
+    @Test
+    void shouldConvert1MinuteToSeconds() {
+        assertThat(converter.minutesToSeconds(1)).isEqualTo(60.0);
+    }
+
 
 }
