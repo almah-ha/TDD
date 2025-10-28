@@ -14,4 +14,9 @@ public class TimeConverter {
             throw new IllegalArgumentException(name + " must be non-negative");
         }
     }
+
+    public static double minutesToSeconds(long minutes) {
+        validateNonNegative(minutes, "minutes");
+        return (double) minutes * SECONDS_PER_MINUTE;
+    }
 }
