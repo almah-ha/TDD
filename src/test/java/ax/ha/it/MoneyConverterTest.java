@@ -16,4 +16,11 @@ public class MoneyConverterTest {
         assertThat(result).isEqualByComparingTo("92.00");
     }
 
+    @Test
+    void shouldConvert92EURToUSD() {
+        MoneyConverter converter = new MoneyConverter();
+        BigDecimal eur = new BigDecimal("92.00");
+        BigDecimal result = converter.eurToUsd(eur);
+        assertThat(result).isEqualByComparingTo("100.00");
+    }
 }
