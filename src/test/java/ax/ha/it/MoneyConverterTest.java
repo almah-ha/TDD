@@ -32,4 +32,11 @@ public class MoneyConverterTest {
         assertThat(result).isEqualByComparingTo("1093.00");
     }
 
+    @Test
+    void shouldConvert100SEKToEUR() {
+        MoneyConverter converter = new MoneyConverter();
+        BigDecimal sek = new BigDecimal("100.00");
+        BigDecimal result = converter.sekToEur(sek);
+        assertThat(result).isEqualByComparingTo("9.00");
+    }
 }
