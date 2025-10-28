@@ -8,6 +8,7 @@ public class MoneyConverter {
     public static final BigDecimal USD_TO_EUR_RATE = new BigDecimal("0.92");
     public static final BigDecimal EUR_TO_USD_RATE = new BigDecimal("0.92");
     public static final BigDecimal EUR_TO_SEK_RATE = new BigDecimal("10.93");
+    public static final BigDecimal USD_TO_SEK_RATE = new BigDecimal("10.50");
 
     public BigDecimal usdToEur(BigDecimal usd) {
         BigDecimal eur = usd.multiply(USD_TO_EUR_RATE);
@@ -23,6 +24,12 @@ public class MoneyConverter {
 
     public BigDecimal eurToSek(BigDecimal eur) {
         BigDecimal sek = eur.multiply(EUR_TO_SEK_RATE);
+        sek = sek.setScale(2, RoundingMode.HALF_UP);
+        return sek;
+    }
+
+    public BigDecimal usdToSek(BigDecimal usd) {
+        BigDecimal sek = usd.multiply(USD_TO_SEK_RATE);
         sek = sek.setScale(2, RoundingMode.HALF_UP);
         return sek;
     }
