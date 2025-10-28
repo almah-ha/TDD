@@ -33,10 +33,10 @@ public class MoneyConverterTest {
     }
 
     @Test
-    void shouldConvert100SEKToEUR() {
+    void shouldConvert100USDToSEK() {
         MoneyConverter converter = new MoneyConverter();
-        BigDecimal sek = new BigDecimal("100.00");
-        BigDecimal result = converter.sekToEur(sek);
-        assertThat(result).isEqualByComparingTo("9.00");
+        BigDecimal usd = new BigDecimal("100.00");
+        BigDecimal result = converter.usdToSek(usd);
+        assertThat(result).isEqualByComparingTo("1050.00");
     }
 }
