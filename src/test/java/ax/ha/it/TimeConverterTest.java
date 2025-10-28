@@ -24,7 +24,7 @@ public class TimeConverterTest {
     void shouldThrowExceptionForNegativeSeconds() {
         assertThatThrownBy(() -> converter.secondsToMinutes(-10))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("Seconds must be between 0 and 59");
+                .hasMessageContaining("seconds must be non-negative");
     }
 
 
