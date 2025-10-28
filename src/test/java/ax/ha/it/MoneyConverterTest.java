@@ -28,7 +28,7 @@ public class MoneyConverterTest {
     void shouldConvert100EURToSEK() {
         MoneyConverter converter = new MoneyConverter();
         BigDecimal eur = new BigDecimal("100.00");
-        BigDecimal result = converter.sekToEur(eur);
+        BigDecimal result = converter.eurToSek(eur);
         assertThat(result).isEqualByComparingTo("1093.00");
     }
 
