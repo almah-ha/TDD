@@ -32,5 +32,9 @@ public class TimeConverterTest {
         assertThat(converter.minutesToSeconds(1)).isEqualTo(60.0);
     }
 
+    @Test
+    void shouldConvert60MinutesToHours() {
+        assertThat(converter.minutesToHours(60)).isEqualTo(1.0);
+    }
 
 }
