@@ -6,6 +6,7 @@ public class TimeConverter {
     private static final int MINUTES_PER_HOUR = 60;
     private static final int HOURS_PER_DAY = 24;
     private static final int SECONDS_PER_HOUR = 3600;
+    private static final int MINUTES_PER_DAY = 1440;
 
     public static double secondsToMinutes(long seconds) {
         validateNonNegative(seconds, "seconds");
@@ -47,4 +48,11 @@ public class TimeConverter {
         validateNonNegative(seconds, "seconds");
         return (double) seconds / SECONDS_PER_HOUR;
     }
+
+    public static double minutesToDays(long minutes) {
+        validateNonNegative(minutes, "minutes");
+        return (double) minutes / MINUTES_PER_DAY;
+    }
+
+
 }
