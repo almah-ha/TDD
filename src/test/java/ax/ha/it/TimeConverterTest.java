@@ -52,4 +52,9 @@ public class TimeConverterTest {
         assertThat(converter.daysToHours(1)).isEqualTo(24.0);
     }
 
+    @Test
+    void shouldConvertSecondsToHours() {
+        assertThat(converter.secondsToHours(3600)).isEqualTo(1.0);
+    }
+
 }
