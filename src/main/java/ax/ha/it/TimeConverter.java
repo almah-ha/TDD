@@ -54,5 +54,10 @@ public class TimeConverter {
         return (double) minutes / MINUTES_PER_DAY;
     }
 
+    public static double daysToMinutes(long days) {
+        validateNonNegative(days, "days");
+        return (double) days * MINUTES_PER_DAY;
+    }
+
 
 }
