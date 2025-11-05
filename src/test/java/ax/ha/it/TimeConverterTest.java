@@ -47,4 +47,9 @@ public class TimeConverterTest {
         assertThat(converter.hoursToDays(24)).isEqualTo(1.0);
     }
 
+    @Test
+    void shouldConvertDaysToHours() {
+        assertThat(converter.daysToHours(1)).isEqualTo(24.0);
+    }
+
 }
