@@ -25,4 +25,9 @@ public class TimeConverter {
         validateNonNegative(minutes, "minutes");
         return (double) minutes / MINUTES_PER_HOUR;
     }
+
+    public static double hoursToMinutes(long hours) {
+        validateNonNegative(hours, "hours");
+        return (double) hours * MINUTES_PER_HOUR;
+    }
 }
