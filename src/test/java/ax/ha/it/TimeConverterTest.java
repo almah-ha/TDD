@@ -37,4 +37,9 @@ public class TimeConverterTest {
         assertThat(converter.minutesToHours(60)).isEqualTo(1.0);
     }
 
+    @Test
+    void shouldConvert1HourToMinutes() {
+        assertThat(converter.hoursToMinutes(1)).isEqualTo(60.0);
+    }
+
 }
