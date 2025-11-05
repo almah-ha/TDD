@@ -59,5 +59,4 @@ public class TimeConverter {
         return (double) days * MINUTES_PER_DAY;
     }
 
-
 }
