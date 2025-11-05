@@ -36,4 +36,9 @@ public class TimeConverter {
         validateNonNegative(hours, "hours");
         return (double) hours / HOURS_PER_DAY;
     }
+
+    public static double daysToHours(long days) {
+        validateNonNegative(days, "days");
+        return (double) days * HOURS_PER_DAY;
+    }
 }
