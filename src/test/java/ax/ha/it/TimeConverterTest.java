@@ -62,4 +62,9 @@ public class TimeConverterTest {
         assertThat(converter.minutesToDays(1440)).isEqualTo(1.0);
     }
 
+    @Test
+    void shouldConvertDaysToMinutes() {
+        assertThat(converter.daysToMinutes(2)).isEqualTo(2880);
+    }
+
 }
