@@ -19,4 +19,22 @@ public class StringProcessorTest {
         String result = processor.reverse("hello");
         assertEquals("olleh", result);
     }
+
+    @Test
+    void shouldHandleSingleCharacter() {
+        String result = processor.reverse("a");
+        assertEquals("a", result);
+    }
+
+    @Test
+    void shouldHandleNullAndEmptyString() {
+        String result = processor.reverse("");
+        assertEquals("", result);
+    }
+
+    @Test
+    void shouldPreserveSpacesInReversal() {
+        String result = processor.reverse("hello world");
+        assertEquals("dlrow olleh", result);
+    }
 }
