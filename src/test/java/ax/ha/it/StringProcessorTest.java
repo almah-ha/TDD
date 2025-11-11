@@ -37,4 +37,38 @@ public class StringProcessorTest {
         String result = processor.reverse("hello world");
         assertEquals("dlrow olleh", result);
     }
+
+    @Test
+    void shouldDetectSimplePalindrome() {
+        assertTrue(processor.isPalindrome("racecar"));
+    }
+
+    @Test
+    void shouldDetectNonPalindrome() {
+        assertFalse(processor.isPalindrome("hello"));
+    }
+
+    @Test
+    void shouldHandleCaseInsensitivePalindromes() {
+        assertTrue(processor.isPalindrome("RaceCar"));
+        assertFalse(processor.isPalindrome("Hello"));
+    }
+
+    @Test
+    void shouldHandlePalindromesWithSpaces() {
+        assertTrue(processor.isPalindrome("race car"));
+        assertFalse(processor.isPalindrome("hello world"));
+    }
+
+    @Test
+    void shouldHandleSingleCharacterAsPalindrome() {
+        assertTrue(processor.isPalindrome("a"));
+        assertTrue(processor.isPalindrome("A"));
+    }
+
+    @Test
+    void shouldHandleNullAndEmptyAsPalindromes() {
+        assertTrue(processor.isPalindrome(null));
+        assertTrue(processor.isPalindrome(""));
+    }
 }
