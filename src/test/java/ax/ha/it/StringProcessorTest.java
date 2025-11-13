@@ -83,5 +83,28 @@ public class StringProcessorTest {
         String result = processor.compress("a");
         assertEquals("a1", result);
     }
-    
+
+    @Test
+    void shouldCountWordsInSimpleSentence() {
+        int result = processor.countWords("A cute little cat");
+        assertEquals(4, result);
+    }
+
+    @Test
+    void shouldHandleMultipleSpacesBetweenWords() {
+        int result = processor.countWords("A   cute  little    cat");
+        assertEquals(4, result);
+    }
+
+    @Test
+    void shouldHandleLeadingAndTrailingSpaces() {
+        int result = processor.countWords("  A cute little cat  ");
+        assertEquals(4, result);
+    }
+
+    @Test
+    void shouldCountSingleWord() {
+        int result = processor.countWords("Hello");
+        assertEquals(1, result);
+    }
 }
