@@ -107,4 +107,23 @@ public class StringProcessorTest {
         int result = processor.countWords("Hello");
         assertEquals(1, result);
     }
+
+    @Test
+    void shouldValidateEmailFormat() {
+        assertTrue(processor.isValidEmail("name@mail.com"));
+        assertTrue(processor.isValidEmail("firstname.lastname@email.com"));
+    }
+
+    @Test
+    void shouldRejectInvalidEmailFormat() {
+        assertFalse(processor.isValidEmail("onlyname"));
+        assertFalse(processor.isValidEmail("noatsign.com"));
+        assertFalse(processor.isValidEmail("name@.com"));
+    }
+
+    @Test
+    void shouldRejectNullAndEmptyEmail() {
+        assertFalse(processor.isValidEmail(null));
+        assertFalse(processor.isValidEmail(""));
+    }
 }
