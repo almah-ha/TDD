@@ -71,4 +71,17 @@ public class StringProcessorTest {
         assertTrue(processor.isPalindrome(null));
         assertTrue(processor.isPalindrome(""));
     }
+
+    @Test
+    void shouldCompressRepeatedCharacters() {
+        String result = processor.compress("aaabbc");
+        assertEquals("a3b2c1", result);
+    }
+
+    @Test
+    void shouldHandleSingleCharacterCompression() {
+        String result = processor.compress("a");
+        assertEquals("a1", result);
+    }
+    
 }
