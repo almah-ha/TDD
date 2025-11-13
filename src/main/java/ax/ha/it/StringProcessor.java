@@ -34,4 +34,16 @@ public class StringProcessor {
         result.append(chars[chars.length - 1]).append(count);
         return result.toString();
     }
+
+    public int countWords(String input) {
+        if (input == null || input.isEmpty()) {
+            return 0;
+        }
+
+        String trimmed = input.trim();
+        if (trimmed.isEmpty()) return 0;
+
+        String[] words = trimmed.split("\\s+");
+        return words.length;
+    }
 }
